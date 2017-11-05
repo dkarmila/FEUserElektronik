@@ -1,0 +1,23 @@
+<h2>Login Form</h2>
+<form (ngSubmit)="postPelanggan(dataTambah)">
+  <div class="container">
+    <label><b>Nama Pelanggan</b></label>
+    <input [(ngModel)]="dataTambah.NamaPelanggan" type="text" name="NamaPelanggan" placeholder="Nama Pelanggan">
+
+    <label><b>Alamat</b></label>
+    <input [(ngModel)]="dataTambah.AlamatPelanggan" type="text" name="AlamatPelanggan" placeholder="Alamat Pelanggan">
+    
+    <label><b>No Telp +62</b></label>
+    <input [(ngModel)]="dataTambah.NoTelp" type="number" name="NoTelp" placeholder="No Telp">
+
+    <label><b>No Rumah +62</b></label>
+    <input [(ngModel)]="dataTambah.NoRmh" type="number" name="NoRmh" placeholder="No Rumah">
+
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Username" [(ngModel)]="dataTambah.UsernamePelanggan" name="UsernamePelanggan" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Password" [(ngModel)]="dataTambah.PasswordPelanggan" name="PasswordPelanggan" required>
+  </div>
+    <button type="submit">Registrasi</button>
+</form>

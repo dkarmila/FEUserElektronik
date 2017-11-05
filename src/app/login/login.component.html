@@ -1,0 +1,12 @@
+<h2>Login Form</h2>
+<form (ngSubmit) = "login(dataLogin)">
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" [(ngModel)]="dataLogin.UsernamePelanggan" name="UsernamePelanggan" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" [(ngModel)]="dataLogin.PasswordPelanggan" name="PasswordPelanggan" required>
+  </div>
+    <button type="submit">Login</button>
+  </form>
+  <a href="/registrasi"><button type="submit">Registrasi</button></a>

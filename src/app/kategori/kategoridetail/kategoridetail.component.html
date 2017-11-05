@@ -1,0 +1,35 @@
+<div class="center_title_bar">{{dataDetail[0].InfoKatBarang[0].NamaKategoriBarang}} - {{dataDetail[0].InfoMerkBarang[0].NamaMerkBarang}}</div>
+<div class="prod_box_big">
+  <div class="top_prod_box_big"></div>
+  <div class="center_prod_box_big">
+    <div class="product_img_big"> 
+      <a href="javascript:popImage('../assets/images/big_pic.jpg','Some Title')" title="header=[Zoom] body=[&nbsp;] fade=[on]">
+        <img src="../assets/images/{{dataDetail[0].GambarBarang}}" alt="" border="0" />
+      </a>
+      <div class="thumbs"> 
+        <a href="#" title="header=[Thumb1] body=[&nbsp;] fade=[on]">
+          <img src="../assets/images/{{dataDetail[0].GambarBarang}}" height="40" alt="" border="0" />
+        </a> 
+        <a href="#" title="header=[Thumb2] body=[&nbsp;] fade=[on]">
+          <img src="../assets/images/{{dataDetail[0].GambarBarang}}" height="40" alt="" border="0" />
+        </a> 
+        <a href="#" title="header=[Thumb3] body=[&nbsp;] fade=[on]">
+          <img src="../assets/images/{{dataDetail[0].GambarBarang}}" height="40" alt="" border="0" />
+        </a>
+      </div>
+    </div>
+    <div class="details_big_box">
+      <div class="product_title_big">
+          {{dataDetail[0].InfoKatBarang[0].NamaKategoriBarang}} - {{dataDetail[0].InfoMerkBarang[0].NamaMerkBarang}} 
+          Tipe {{dataDetail[0].TypeBarang}}
+      </div>
+      <div class="specifications"> 
+        Spesifikasi: <span class="blue">{{dataDetail[0].KetBarang}}</span>
+      </div>
+      <div class="prod_price"><span class="price">{{dataDetail[0].HargaBarang | currency : "IDR"}}</span></div>
+      <br/>
+      <a (click)="addchart(dataDetail[0].KdBarang,dataDetail[0].HargaBarang,dataDetail[0].InfoMerkBarang[0].NamaMerkBarang,dataDetail[0].InfoKatBarang[0].NamaKategoriBarang,dataDetail[0].StokAkhir)" class="addtocart">add to cart</a>
+  </div>
+  <div class="bottom_prod_box_big"></div>
+</div>
+

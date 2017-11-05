@@ -1,0 +1,22 @@
+<table>
+  <thead>
+      <tr>
+          <th>Kode Penjualan</th>
+          <th>Tanggal Penjualan</th>
+          <th>Jumlah Item</th>
+          <th>Total Harga Jual</th>
+          <th>Aksi</th>
+        </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of dataTampil">
+          <td>{{item.KdPenjualan}}</td>
+          <td>{{item.TglPenjualan}}</td>
+          <td>{{item.JmlItem}}</td>
+          <td>{{item.TotalHargaJual}}</td>
+          <td>
+            <a class="btn btn-success" (click)="Detail(item.KdPenjualan)" data-keyboard="false" data-backdrop="static" data-toggle="modal" data-target="#detailModal"><span class="glyphicon glyphicon-search">Detail</span></a>
+          </td>
+        </tr>
+  </tbody>
+</table>

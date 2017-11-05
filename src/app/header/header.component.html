@@ -1,0 +1,39 @@
+  
+  <div id="header">
+    <div id="logo"> <a href="#"><img src="../assets/images/logo.png" alt="" border="0" width="237" height="140" /></a> </div>
+    <div class="oferte_content">
+      <div class="top_divider"><img src="../assets/images/header_divider.png" alt="" width="1" height="164" /></div>
+    </div>
+    <!-- end of oferte_content-->
+  </div>
+  <div id="main_content">
+      <div id="menu_tab">
+        <div class="left_menu_corner"></div>
+        <ul class="menu">
+          <li><a href="#" class="nav1"> Home</a></li>
+          <li class="divider"></li>
+          <li *ngIf="token!=undefined;"><a [routerLink]="['/akun']" class="nav4">My account</a></li>
+          <li class="divider" *ngIf="token!=undefined;"></li>
+          <li *ngIf="token!=undefined;"><a [routerLink]="['/pembelian']" class="nav4">Pembelian</a></li>
+          <li class="divider" *ngIf="token!=undefined;"></li>
+          <li>
+            <a [routerLink]="['/login']" class="nav4" *ngIf="token==undefined; else logout">Sign In</a>
+            <ng-template #logout>
+              <a [routerLink]="['/logout']" class="nav4">Sign Out</a>
+            </ng-template>
+          </li>
+          <li class="divider"></li>
+<!--           
+            <li><a [routerLink]="['/login']" class="nav4">Sign Out</a></li>
+            <li class="divider"></li>
+          </ng-template> -->
+          <li><a href="contact.html" class="nav6">Contact Us</a></li>
+          <li class="divider"></li>
+          <li class="currencies">
+            <form (ngSubmit) = "cari(data)">
+            <input type="text" class="search_input" name="search" [(ngModel)]="data" placeholder="Seacrh"/>
+          </form>
+          </li>
+        </ul>
+        <div class="right_menu_corner"></div>
+      </div>

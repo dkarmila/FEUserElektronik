@@ -1,0 +1,16 @@
+<div class="center_title_bar" *ngIf="data">Cari {{merk}}</div>
+<div class="prod_box" *ngFor="let item of data">
+  <div class="top_prod_box"></div>
+  <div class="center_prod_box">
+    <div class="product_title"><a [routerLink]="['/detail/'+item.KdBarang]">{{item.InfoMerkBarang[0].NamaMerkBarang}}</a></div>
+    <div class="product_img"><a [routerLink]="['/detail/'+item.KdBarang]"><img  src="../assets/images/{{item.GambarBarang}}" alt="" border="0" /></a></div>
+    <div class="prod_price"><span class="price">{{item.HargaBarang | currency:"IDR"}}</span></div>
+  </div>
+  <div class="bottom_prod_box"></div>
+  <div class="prod_details_tab" *ngIf="data">
+    <a (click)="addchart(item.KdBarang,item.HargaBarang,item.InfoMerkBarang[0].NamaMerkBarang,item.InfoKatBarang[0].NamaKategoriBarang,item.InfoKatBarang[0].KdKategoriBarang)" title="header=[Add to cart] body=[&nbsp;] fade=[on]">
+      <img src="../assets/images/cart.gif" alt="" border="0" class="left_bt" />
+    </a> 
+    <a [routerLink]="['/detail/'+item.KdBarang]" class="prod_details right_bt">details</a> 
+  </div>
+</div>

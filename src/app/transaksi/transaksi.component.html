@@ -1,0 +1,26 @@
+  <table>
+    <tr>
+      <th>Kode Barang</th>
+      <th>Nama Merk Barang</th>
+      <th>Tipe Barang</th>
+      <th>Jumlah Barang</th>
+      <th>Harga Barang</th>
+      <th>Total Harga</th>
+      <th>Aksi</th>
+    </tr>
+    <tr *ngFor="let item of data">
+      <td>{{item[0]}}</td>
+      <td>{{item[1]}}</td>
+      <td>{{item[2]}}</td>
+      <td>{{item[3]}} <button (click)="kurang(item[0])">-</button><button (click)="tambah(item[0],item[3])">+</button></td>
+      <td>{{item[4] | currency:"IDR"}}</td>
+      <td>{{item[3]*item[4] | currency:"IDR"}}</td>
+      <td><button (click)="hapus(item[0])">Hapus</button></td>
+    </tr>
+    <tr>
+      <td colspan="4">{{CurrentDate | date: 'dd/MM/yyyy'}}</td>
+      <td colspan="1">Sub Total</td>
+      <td>{{subtotal | currency:"IDR"}}</td>
+      <td><button (click)="pickup()">Pick Up</button></td>
+    </tr>
+  </table>

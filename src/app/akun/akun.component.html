@@ -1,0 +1,26 @@
+<h2>Akun</h2>
+<form *ngIf="dataEdit">
+  <div class="container">
+    <label><b>Kode Pelanggan</b></label>
+    <input [(ngModel)]="dataEdit.KdPelanggan" type="text" name="KdPelanggan" placeholder="Nama Pelanggan" disabled>
+
+    <label><b>Nama Pelanggan</b></label>
+    <input [(ngModel)]="dataEdit.NamaPelanggan" type="text" name="NamaPelanggan" placeholder="Nama Pelanggan">
+
+    <label><b>Alamat</b></label>
+    <input [(ngModel)]="dataEdit.AlamatPelanggan" type="text" name="AlamatPelanggan" placeholder="Alamat Pelanggan">
+    
+    <label><b>No Telp +62</b></label>
+    <input [(ngModel)]="dataEdit.NoTelp" type="number" name="NoTelp" placeholder="No Telp">
+
+    <label><b>No Rumah +62</b></label>
+    <input [(ngModel)]="dataEdit.NoRmh" type="number" name="NoRmh" placeholder="No Rumah">
+
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Username" [(ngModel)]="dataEdit.UsernamePelanggan" name="UsernamePelanggan" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Password" [(ngModel)]="dataEdit.PasswordPelanggan" name="PasswordPelanggan" required>
+  </div>
+    <button type="submit" (click)="putPelanggan(dataEdit)">Simpan</button>
+</form>
