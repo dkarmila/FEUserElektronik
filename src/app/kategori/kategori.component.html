@@ -8,9 +8,10 @@
   </div>
   <div class="bottom_prod_box"></div>
   <div class="prod_details_tab" *ngIf="data">
-    <a (click)="addchart(item.KdBarang,item.HargaBarang,item.InfoMerkBarang[0].NamaMerkBarang,item.InfoKatBarang[0].NamaKategoriBarang,item.InfoKatBarang[0].KdKategoriBarang)" title="header=[Add to cart] body=[&nbsp;] fade=[on]">
+    <a *ngIf="item.StokAkhir!=0" (click)="addchart(item.KdBarang,item.HargaBarang,item.InfoMerkBarang[0].NamaMerkBarang,item.InfoKatBarang[0].NamaKategoriBarang,item.InfoKatBarang[0].KdKategoriBarang)" title="header=[Add to cart] body=[&nbsp;] fade=[on]">
       <img src="../assets/images/cart.gif" alt="" border="0" class="left_bt" />
     </a> 
+    <div *ngIf="item.StokAkhir==0">Stok Kosong</div>
     <a [routerLink]="['/detail/'+item.KdBarang]" class="prod_details right_bt">details</a> 
   </div>
 </div>

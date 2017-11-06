@@ -45,7 +45,6 @@ export class AkunComponent implements OnInit {
               localStorage.removeItem('HargaItemBarang');
               localStorage.removeItem('NamaMerkBarang');
               localStorage.removeItem('TipeBarang');
-              localStorage.removeItem('StokAkhirBarang');
               window.location.href='./login';
             })
           } else {

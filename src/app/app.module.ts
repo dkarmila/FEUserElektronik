@@ -22,6 +22,7 @@ import { SearchComponent } from './search/search.component';
 import { PembelianComponent } from './pembelian/pembelian.component';
 
 let routes: Routes =[
+  {path: '', component: HomeComponent},
   {path: 'kategori/:kdkatbarang', component: KategoriComponent},
   {path: 'login', component: LoginComponent},
   {path: 'detail/:kdbarang', component: KategoridetailComponent },
